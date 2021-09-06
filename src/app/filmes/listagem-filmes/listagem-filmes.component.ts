@@ -44,7 +44,7 @@ export class ListagemFilmesComponent implements OnInit {
       this.resetarConsulta();
     });
 
-    this.generos = ['Ação', 'Romance', 'Aventura', 'Terror', 'Ficção cientifica', 'Comédia', 'Aventura', 'Drama'];
+    this.generos = ['Action', 'Romance', 'Adventure', 'Terror', 'Ficção cientifica', 'Comedy', 'Adventure', 'Drama'];
 
     this.listarFilmes();
   }

@@ -12,8 +12,8 @@ export class InputNumberComponent {
   @Input() title: string;
   @Input() formGroup: FormGroup;
   @Input() controlName: string;
-  @Input() minimum = 0;
-  @Input() maximum = 10;
+  @Input() minimum = -100;
+  @Input() maximum = 100;
   @Input() step = 1;
 
   constructor(public validation: ValidateInputService) { }

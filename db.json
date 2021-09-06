@@ -8,7 +8,7 @@
       "descricao": "A police officer joins a secret organization that polices and monitors extraterrestrial interactions on Earth.",
       "nota": 7.3,
       "urlIMDb": "https://www.imdb.com/title/tt0119654/",
-      "genero": "Ação"
+      "genero": "Action"
     },
     {
       "id": 2,
@@ -18,7 +18,7 @@
       "descricao": "Agent J is sent to find Agent K and restore his memory after the re-appearance of a case from K's past.",
       "nota": 6.2,
       "urlIMDb": "https://www.imdb.com/title/tt0120912",
-      "genero": "Ação"
+      "genero": "Action"
     },
     {
       "id": 3,
@@ -28,7 +28,7 @@
       "descricao": "Agent J travels in time to M.I.B.'s early days in 1969 to stop an alien from assassinating his friend Agent K and changing history.",
       "nota": 6.8,
       "urlIMDb": "https://www.imdb.com/title/tt1409024/",
-      "genero": "Ação"
+      "genero": "Action"
     },
     {
       "id": 4,
@@ -38,7 +38,7 @@
       "descricao": "The Men in Black have always protected the Earth from the scum of the universe. In this new adventure, they tackle their biggest threat to date: a mole in the Men in Black organization.",
       "nota": 5.6,
       "urlIMDb": "https://www.imdb.com/title/tt2283336/",
-      "genero": "Ação"
+      "genero": "Action"
     },
     {
       "id": 5,
@@ -58,7 +58,7 @@
       "descricao": "After the devastating events of Vingadores: Guerra Infinita (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
       "nota": 8.5,
       "urlIMDb": "https://www.imdb.com/title/tt4154796/",
-      "genero": "Aventura"
+      "genero": "Adventure"
     },
     {
       "id": 7,
@@ -68,7 +68,7 @@
       "descricao": "Carol Danvers becomes one of the universe's most powerful heroes when Earth is caught in the middle of a galactic war between two alien races.",
       "nota": 6.9,
       "urlIMDb": "https://www.imdb.com/title/tt4154664/",
-      "genero": "Ação"
+      "genero": "Action"
     },
     {
       "id": 8,
@@ -78,7 +78,7 @@
       "descricao": "A newly fostered young boy in search of his mother instead finds unexpected super powers and soon gains a powerful enemy.",
       "nota": 7.1,
       "urlIMDb": "https://www.imdb.com/title/tt0448115/",
-      "genero": "Comédia"
+      "genero": "Comedy"
     },
     {
       "id": 9,
@@ -88,7 +88,7 @@
       "descricao": "John Wick is on the run after killing a member of the international assassin's guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.",
       "nota": 7.5,
       "urlIMDb": "https://www.imdb.com/title/tt6146586/",
-      "genero": "Ação"
+      "genero": "Action"
     },
     {
       "titulo": "Mistério no Mediterrâneo",
@@ -97,7 +97,7 @@
       "descricao": "A New York cop and his wife go on a European vacation to reinvigorate the spark in their marriage, but end up getting framed and on the run for the death of an elderly billionaire.",
       "nota": 6,
       "urlIMDb": "https://www.imdb.com/title/tt1618434/",
-      "genero": "Comédia",
+      "genero": "Comedy",
       "id": 10
     },
     {
@@ -107,7 +107,7 @@
       "descricao": "In Theaters Now\nAfter Palpatine mysteriously returns, the Resistance faces the First Order once more in the final chapter of the Skywalker saga.",
       "nota": 6.9,
       "urlIMDb": "https://www.imdb.com/title/tt2527338/?ref_=vi_md_ti",
-      "genero": "Aventura",
+      "genero": "Adventure",
       "id": 11
     }
   ]

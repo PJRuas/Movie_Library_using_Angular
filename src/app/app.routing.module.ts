@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FilmesModule } from './filmes/filmes.module';
-import { CadastroFilmesComponent } from './filmes/cadastro-filmes/cadastro-filmes.component';
+import { MovieRegisterComponent } from './filmes/cadastro-filmes/movie-register.component';
 import { ListagemFilmesComponent } from './filmes/listagem-filmes/listagem-filmes.component';
 import { VisualizarFilmesComponent } from './filmes/visualizar-filmes/visualizar-filmes.component';
 
@@ -24,11 +24,11 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            component: CadastroFilmesComponent
+            component: MovieRegisterComponent
           },
           {
             path: ':id',
-            component: CadastroFilmesComponent
+            component: MovieRegisterComponent
           }
         ]
       },

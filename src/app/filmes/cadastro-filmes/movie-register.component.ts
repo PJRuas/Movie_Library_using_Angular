@@ -4,13 +4,15 @@ import { ValidateInputService } from 'src/app/shared/components/inputs/validate-
 
 
 @Component({
-  selector: 'dio-cadastro-filmes',
-  templateUrl: './cadastro-filmes.component.html',
-  styleUrls: ['./cadastro-filmes.component.scss']
+  selector: 'dio-movie-register',
+  templateUrl: './movie-register.component.html',
+  styleUrls: ['./movie-register.component.scss']
 })
-export class CadastroFilmesComponent implements OnInit {
+export class MovieRegisterComponent implements OnInit {
 
   register: FormGroup;
+
+  genres: Array<string>;
   
   constructor(public validation: ValidateInputService, 
               private fb: FormBuilder) {}
@@ -27,8 +29,11 @@ export class CadastroFilmesComponent implements OnInit {
       description: [''],
       score: [0, [Validators.required, Validators.min(0), Validators.max(10)]],
       imdbUrl: ['', [Validators.minLength(10)]],
-      gender: ['', [Validators.required]]
+      genre: ['', [Validators.required]]
     });
+
+    this.genres = ["Action", "Adventure","Comedy", "Drama", "Fantasy", "Horror", "Mystery","Musical", "Science Fiction", "Suspense", "Western"]
+
   }
 
   public save(): void {

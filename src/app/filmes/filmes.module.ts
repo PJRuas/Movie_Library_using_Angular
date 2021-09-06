@@ -4,7 +4,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
-import { CadastroFilmesComponent } from './cadastro-filmes/cadastro-filmes.component';
+import { MovieRegisterComponent } from './cadastro-filmes/movie-register.component';
 import { MaterialModule } from '../shared/material/material.module';
 import { ListagemFilmesComponent } from './listagem-filmes/listagem-filmes.component';
 import { InputsModule } from '../shared/components/inputs/inputs.module';
@@ -19,6 +19,6 @@ import { VisualizarFilmesComponent } from './visualizar-filmes/visualizar-filmes
     InputsModule,
     InfiniteScrollModule
   ],
-  declarations: [CadastroFilmesComponent, ListagemFilmesComponent, VisualizarFilmesComponent]
+  declarations: [MovieRegisterComponent, ListagemFilmesComponent, VisualizarFilmesComponent]
 })
 export class FilmesModule { }

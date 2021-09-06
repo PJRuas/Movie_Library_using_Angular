@@ -1,7 +1,7 @@
 <mat-toolbar class="app-title">Register a Movie</mat-toolbar>
 <div class="main-div">
   <mat-card class="center width50">
-    <form [formGroup]="register" (ngSubmit)="save()" (ngReset)="clearForm()">
+    <form autocomplete="off" novalidate [formGroup]="register" (ngSubmit)="save()" (ngReset)="clearForm()">
       <mat-card-content>
 
         <dio-input-text 
@@ -25,7 +25,8 @@
         <dio-input-select 
             title="Gender *" 
             [formGroup]="register" 
-            controlName="gender">
+            controlName="genre"
+            [options]="genres">
         </dio-input-select>
 
         <dio-input-textarea 
@@ -36,7 +37,10 @@
 
         <dio-input-number 
             title="IMDB Score *" 
-            [formGroup]="register" 
+            [formGroup]="register"
+            step="0.1"
+            minimum="0"
+            maximum="10"
             controlName="score">
         </dio-input-number>
         
