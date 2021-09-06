@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ValidateInputService } from 'src/app/shared/components/inputs/validate-input.service';
 
 
 @Component({
@@ -11,7 +12,8 @@ export class CadastroFilmesComponent implements OnInit {
 
   register: FormGroup;
   
-  constructor(private fb: FormBuilder) {}
+  constructor(public validation: ValidateInputService, 
+              private fb: FormBuilder) {}
 
   get f(){
     return this.register.controls;

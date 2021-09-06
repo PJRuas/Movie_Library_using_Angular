@@ -1,19 +1,19 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup, AbstractControl } from '@angular/forms';
-import { ValidarCamposService } from '../validar-campos.service';
+import { ValidateInputService } from '../validate-input.service';
 
 @Component({
-  selector: 'dio-input-textarea',
-  templateUrl: './input-textarea.component.html',
-  styleUrls: ['./input-textarea.component.css']
+  selector: 'dio-input-date',
+  templateUrl: './input-date.component.html',
+  styleUrls: ['./input-date.component.css']
 })
-export class InputTextareaComponent {
+export class InputDateComponent {
 
   @Input() titulo: string;
   @Input() formGroup: FormGroup;
   @Input() controlName: string;
 
-  constructor(public validacao: ValidarCamposService) { }
+  constructor(public validation: ValidateInputService) { }
 
   get formControl(): AbstractControl {
     return this.formGroup.controls[this.controlName];

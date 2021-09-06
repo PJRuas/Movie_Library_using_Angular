@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup, AbstractControl } from '@angular/forms';
-import { ValidarCamposService } from '../validar-campos.service';
+import { ValidateInputService } from '../validate-input.service';
 
 @Component({
   selector: 'dio-input-number',
@@ -16,7 +16,7 @@ export class InputNumberComponent {
   @Input() maximo = 10;
   @Input() step = 1;
 
-  constructor(public validacao: ValidarCamposService) { }
+  constructor(public validation: ValidateInputService) { }
 
   get formControl(): AbstractControl {
     return this.formGroup.controls[this.controlName];
