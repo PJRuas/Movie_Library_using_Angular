@@ -9,10 +9,10 @@ import { ValidateInputService } from '../validate-input.service';
 })
 export class InputSelectComponent {
 
-  @Input() titulo: string;
+  @Input() title: string;
   @Input() formGroup: FormGroup;
   @Input() controlName: string;
-  @Input() opcoes: Array<string>;
+  @Input() options: Array<string>;
 
   constructor(public validation: ValidateInputService) { }
 

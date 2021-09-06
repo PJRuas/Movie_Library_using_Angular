@@ -4,56 +4,49 @@
     <form [formGroup]="register" (ngSubmit)="save()" (ngReset)="clearForm()">
       <mat-card-content>
 
-        <mat-form-field class="full-width">
-          <input matInput placeholder="Title *" name="title" formControlName="title">
-          <mat-error *ngIf="validation.hasErrorValidation(f.title, 'required')"> Field Required </mat-error>
-          <mat-error *ngIf="validation.hasErrorValidation(f.title, 'minlength')"> Min Characters: 2 </mat-error>
-          <mat-error *ngIf="validation.hasErrorValidation(f.title, 'maxlength')"> Max Characters: 256 </mat-error>
-        </mat-form-field>
+        <dio-input-text 
+            title="Title *" 
+            [formGroup]="register" 
+            controlName="title">
+        </dio-input-text>
 
-        <mat-form-field class="full-width">
-          <input matInput placeholder="Picture Url" name="urlPicture" formControlName="urlPicture">
-          <mat-error *ngIf="validation.hasErrorValidation(f.urlPicture, 'minlength')"> Min Characters: 10 </mat-error>
-        </mat-form-field>
+        <dio-input-text
+            title="Picture Url" 
+            [formGroup]="register" 
+            controlName="urlPicture">
+        </dio-input-text>
+        
+        <dio-input-date 
+            title="Release Date *" 
+            [formGroup]="register" 
+            controlName="releaseDate">
+        </dio-input-date>
 
-        <mat-form-field class="full-width">
-          <input readonly (click)="picker.open()" matInput [matDatepicker]="picker" placeholder="Release Date *" name="release-date" formControlName="releaseDate">
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-          <mat-error *ngIf="validation.hasErrorValidation(f.releaseDate, 'required')"> Field Required </mat-error>
-        </mat-form-field>
+        <dio-input-select 
+            title="Gender *" 
+            [formGroup]="register" 
+            controlName="gender">
+        </dio-input-select>
 
-        <mat-form-field class="full-width">
-          <mat-select placeholder="Gender *" formControlName="gender">
-            <mat-option value="Action">Action</mat-option>
-            <mat-option value="Adventure">Adventure</mat-option>         
-            <mat-option value="Drama">Drama</mat-option>
-            <mat-option value="Horror">Horror</mat-option>
-            <mat-option value="Romance">Romance</mat-option>
-            <mat-option value="Science Fiction">Science Fiction</mat-option>
-            <mat-option value="Suspense">Suspense</mat-option>
-          </mat-select>
+        <dio-input-textarea 
+            title="Description" 
+            [formGroup]="register" 
+            controlName="description">
+        </dio-input-textarea>
 
-          <mat-error *ngIf="validation.hasErrorValidation(f.gender, 'required')"> Field Required </mat-error>
-        </mat-form-field>
-        <mat-form-field class="full-width">
-          <textarea matInput placeholder="Description" name="description" formControlName="description"></textarea>
-        </mat-form-field>
-
-        <mat-form-field class="full-width">
-          <input type="number" min="0" max="10" step="0.1" matInput placeholder="IMDb Score *" name="score" formControlName="score">
-          <mat-error *ngIf="validation.hasErrorValidation(f.score, 'required')"> Field Required </mat-error>
-          <mat-error *ngIf="validation.hasErrorValidation(f.score, ('min'))"> Must be between 0~10 </mat-error>
-          <mat-error *ngIf="validation.hasErrorValidation(f.score, ('max'))"> Must be between 0~10 </mat-error>
-        </mat-form-field>
-
-        <mat-form-field class="full-width">
-          <input matInput placeholder="IMDb Url" name="imdb-url" formControlName="imdbUrl">
-          <mat-error *ngIf="validation.hasErrorValidation(f.imdbUrl, 'minlength')"> Min Characters: 10 </mat-error>
-        </mat-form-field>
-
+        <dio-input-number 
+            title="IMDB Score *" 
+            [formGroup]="register" 
+            controlName="score">
+        </dio-input-number>
+        
+        <dio-input-text 
+            title="IMDB Url" 
+            [formGroup]="register" 
+            controlName="imdbUrl">
+        </dio-input-text>
+        
       </mat-card-content>
-
       <mat-card-actions>
         <button type="submit" color="accent" mat-raised-button>Save</button>
         <button type="reset" color="warn" mat-raised-button>Cancel</button>

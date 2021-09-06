@@ -9,11 +9,11 @@ import { ValidateInputService } from '../validate-input.service';
 })
 export class InputNumberComponent {
 
-  @Input() titulo: string;
+  @Input() title: string;
   @Input() formGroup: FormGroup;
   @Input() controlName: string;
-  @Input() minimo = 0;
-  @Input() maximo = 10;
+  @Input() minimum = 0;
+  @Input() maximum = 10;
   @Input() step = 1;
 
   constructor(public validation: ValidateInputService) { }

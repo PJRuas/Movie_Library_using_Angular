@@ -9,7 +9,7 @@ import { ValidateInputService } from '../validate-input.service';
 })
 export class InputTextComponent {
 
-  @Input() titulo: string;
+  @Input() title: string;
   @Input() formGroup: FormGroup;
   @Input() controlName: string;
 

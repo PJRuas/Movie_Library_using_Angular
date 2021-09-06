@@ -30,4 +30,4 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     InputSelectComponent
   ]
 })
-export class CamposModule { }
+export class InputsModule { }
