@@ -9,19 +9,19 @@ export class ConfigParamsService {
 
   constructor() { }
 
-  configurarParametros(config: ConfigPrams): HttpParams {
+  configureParameters(config: ConfigPrams): HttpParams {
     let httpParams = new HttpParams();
-    if (config.pagina) {
-      httpParams = httpParams.set('_page', config.pagina.toString());
+    if (config.page) {
+      httpParams = httpParams.set('_page', config.page.toString());
     }
-    if (config.limite) {
-      httpParams = httpParams.set('_limit', config.limite.toString());
+    if (config.limit) {
+      httpParams = httpParams.set('_limit', config.limit.toString());
     }
-    if (config.pesquisa) {
-      httpParams = httpParams.set('q', config.pesquisa);
+    if (config.search) {
+      httpParams = httpParams.set('q', config.search);
     }
-    if (config.campo) {
-      httpParams = httpParams.set(config.campo.tipo, config.campo.valor.toString());
+    if (config.field) {
+      httpParams = httpParams.set(config.field.type, config.field.value.toString());
     }
     httpParams = httpParams.set('_sort', 'id');
     httpParams = httpParams.set('_order', 'desc');

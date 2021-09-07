@@ -1,8 +1,8 @@
-import { CampoGenerico } from './campo-generico';
+import { GenericField } from './generic-field';
 
 export interface ConfigPrams {
-  pagina?: number;
-  limite?: number;
-  pesquisa?: string;
-  campo?: CampoGenerico;
+  page?: number;
+  limit?: number;
+  search?: string;
+  field?: GenericField;
 }

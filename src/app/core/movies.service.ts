@@ -24,7 +24,7 @@ export class MoviesService {
   }
 
   list(config: ConfigPrams): Observable<Movie[]> {
-    const configPrams = this.configService.configurarParametros(config);
+    const configPrams = this.configService.configureParameters(config);
     return this.http.get<Movie[]>(url, {params: configPrams});
   }
 

@@ -1,6 +1,6 @@
 <mat-toolbar class="app-title">Register a Movie</mat-toolbar>
 <div class="main-div">
-  <mat-card class="center width50">
+  <mat-card class="center width50" *ngIf="register">
     <form autocomplete="off" novalidate [formGroup]="register" (ngSubmit)="submit()" (ngReset)="clearForm()">
       <mat-card-content>
 
@@ -47,7 +47,7 @@
         <dio-input-text 
             title="IMDB Url" 
             [formGroup]="register" 
-            controlName="imdbUrl">
+            controlName="urlImdb">
         </dio-input-text>
         
       </mat-card-content>

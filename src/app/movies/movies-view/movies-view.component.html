@@ -1,18 +1,20 @@
-<mat-list *ngIf="movie; else semRegistro">
+<mat-list *ngIf="movie; else noRegistry">
   <mat-list-item> Title: {{movie.title}} </mat-list-item>
-  <mat-list-item> Release Date: {{movie.releaseDate | date: 'dd/MM/yyyy' }} </mat-list-item>
   <mat-list-item> Genre: {{movie.genre}} </mat-list-item>
-  <mat-list-item class="quebrar-linha"> Description: {{movie.description}} </mat-list-item>
-  <mat-list-item> IMDb Score: <a [href]="movie.urlImdb" target="_blank"> {{movie.score}}</a> </mat-list-item>
-  <img mat-card-image [src]="movie.pictureUrl || semFoto" >
+  <mat-list-item> Release Date: {{movie.releaseDate | date: 'dd/MM/yyyy' }} </mat-list-item>
+  
+  <mat-list-item class="line-break"> Description: {{movie.description}} </mat-list-item>
+  <mat-list-item> IMDb Score:  <a [href]="movie.urlImdb" target="_blank"> {{movie.score}}</a> </mat-list-item>
+  <img mat-card-image [src]="movie.pictureUrl || pictureNotFound" >
 </mat-list>
 <mat-card>
   <mat-card-actions>
     <button color="accent" mat-raised-button (click)="edit()">Edit</button>
     <button color="warn" mat-raised-button (click)="delete()">Delete</button>
+    <button color="primary" mat-raised-button (click)="back()">Back</button>
   </mat-card-actions>
 </mat-card>
 
-<ng-template #semRegistro>
+<ng-template #noRegistry>
   <h1 class="full-width main-div">Sorry, nothing was found</h1>
 </ng-template>

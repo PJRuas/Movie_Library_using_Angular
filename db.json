@@ -116,7 +116,7 @@
       "releaseDate": "2021-09-03T03:00:00.000Z",
       "description": "Shang-Chi, the master of unarmed weaponry-based Kung Fu, is forced to confront his past after being drawn into the Ten Rings organization",
       "score": 8.1,
-      "imdbUrl": "https://www.imdb.com/title/tt9376612/?ref_=tt_mv_close",
+      "urlImdb": "https://www.imdb.com/title/tt9376612/?ref_=tt_mv_close",
       "genre": "Action",
       "id": 12
     },
@@ -126,7 +126,7 @@
       "releaseDate": "2021-07-09T03:00:00.000Z",
       "description": "In Marvel Studios' action-packed spy thriller \"Black Widow,\" Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.",
       "score": 6.8,
-      "imdbUrl": "https://www.imdb.com/title/tt3480822/?ref_=hm_tpks_tt_i_6_pd_tp1_cp",
+      "urlImdb": "https://www.imdb.com/title/tt3480822/?ref_=hm_tpks_tt_i_6_pd_tp1_cp",
       "genre": "Action",
       "id": 13
     }

@@ -1,12 +1,12 @@
 <mat-toolbar class="app-title">Registered Movies</mat-toolbar>
 
-<mat-card class="float-left margin10 filtro-listagem" >
-  <form autocomplete="off" novalidate [formGroup]="filtrosListagem">
+<mat-card class="float-left margin10 list-filter" >
+  <form autocomplete="off" novalidate [formGroup]="listFilter">
     <div class="float-left width50">
       <div class="padding10">
-        <dio-input-text title="Search here"
+        <dio-input-text title="Search for"
                         controlName="text"
-                        [formGroup]="filtrosListagem">
+                        [formGroup]="listFilter">
         </dio-input-text>
       </div>
     </div>
@@ -15,7 +15,7 @@
         <dio-input-select title="Genre"
                           controlName="genre"
                           [options]="genres"
-                          [formGroup]="filtrosListagem">
+                          [formGroup]="listFilter">
         </dio-input-select>
       </div>
     </div>
@@ -25,25 +25,25 @@
 <div  class="home-content"
       infiniteScroll
       (scrolled)="onScroll()"
-      *ngIf="movies.length; else semRegistro">
+      *ngIf="movies.length; else noRegistry">
   <mat-card class="home-card" *ngFor="let movie of movies">
     <mat-card-header>
       <div mat-card-avatar></div>
       <mat-card-title>{{movie.title}}</mat-card-title>
       <mat-card-subtitle>{{movie.genre}}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image [src]="movie.pictureUrl || semFoto" >
+    <img mat-card-image [src]="movie.pictureUrl || pictureNotFound" >
     <mat-card-content>
-      <p class="quebrar-linha">
+      <p class="line-break padding10">
         {{movie.description || 'No description provided'}}
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <button color="accent" mat-raised-button (click)="abrir(movie.id)">OPEN</button>
+      <button color="accent" mat-raised-button (click)="open(movie.id)">More</button>
     </mat-card-actions>
   </mat-card>
 </div>
 
-<ng-template #semRegistro>
+<ng-template #noRegistry>
   <h1 class="full-width main-div">Sorry, nothing found.</h1>
 </ng-template>

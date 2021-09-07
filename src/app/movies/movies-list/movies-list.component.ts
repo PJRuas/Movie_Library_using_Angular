@@ -12,14 +12,14 @@ import { ConfigPrams } from 'src/app/shared/models/config-prams';
   styleUrls: ['./movies-list.component.scss']
 })
 export class MoviesListComponent implements OnInit {
-  readonly semFoto = 'https://www.termoparts.com.br/wp-content/uploads/2017/10/no-image.jpg';
+  readonly pictureNotFound = 'https://www.termoparts.com.br/wp-content/uploads/2017/10/no-image.jpg';
 
   config: ConfigPrams = {
-    pagina: 0,
-    limite: 4
+    page: 0,
+    limit: 4
   };
   movies: Movie[] = [];
-  filtrosListagem: FormGroup;
+  listFilter: FormGroup;
   genres: Array<string>;
 
   constructor(private moviesService: MoviesService,
@@ -27,21 +27,21 @@ export class MoviesListComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit(): void {
-    this.filtrosListagem = this.fb.group({
+    this.listFilter = this.fb.group({
       text: [''],
       genre: ['']
     });
 
-    this.filtrosListagem.get('text').valueChanges
+    this.listFilter.get('text').valueChanges
     .pipe(debounceTime(400))
     .subscribe((val: string) => {
-      this.config.pesquisa = val;
-      this.resetarConsulta();
+      this.config.search = val;
+      this.clearSearch();
     });
 
-    this.filtrosListagem.get('genre').valueChanges.subscribe((val: string) => {
-      this.config.campo = {tipo: 'genre', valor: val};
-      this.resetarConsulta();
+    this.listFilter.get('genre').valueChanges.subscribe((val: string) => {
+      this.config.field = {type: 'genre', value: val};
+      this.clearSearch();
     });
 
     this.genres = ["Action", "Adventure","Comedy", "Drama", "Fantasy", "Horror", "Mystery","Musical", "Science Fiction", "Suspense", "Western"];
@@ -53,18 +53,18 @@ export class MoviesListComponent implements OnInit {
     this.listMovies();
   }
 
-  abrir(id: number): void {
+  open(id: number): void {
     this.router.navigateByUrl('/movies/' + id);
   }
 
   private listMovies(): void {
-    this.config.pagina++;
+    this.config.page++;
     this.moviesService.list(this.config)
       .subscribe((movies: Movie[]) => this.movies.push(...movies));
   }
 
-  private resetarConsulta(): void {
-    this.config.pagina = 0;
+  private clearSearch(): void {
+    this.config.page = 0;
     this.movies = [];
     this.listMovies();
   }

@@ -12,7 +12,7 @@ import { AlertComponent } from 'src/app/shared/components/alert/alert.component'
   styleUrls: ['./movies-view.component.css']
 })
 export class MoviesViewComponent implements OnInit {
-  readonly semFoto = 'https://www.termoparts.com.br/wp-content/uploads/2017/10/no-image.jpg';
+  readonly pictureNotFound = 'https://www.termoparts.com.br/wp-content/uploads/2017/10/no-image.jpg';
   movie: Movie;
   id: number;
 
@@ -35,8 +35,8 @@ export class MoviesViewComponent implements OnInit {
       data: {
         title: 'Are you sure?',
         description: 'This change cannot be undone.',
-        corBtnCancel: 'primary',
-        corBtnSuccess: 'warn',
+        colorBtnCancel: 'primary',
+        colorBtnSuccess: 'warn',
         hasBtnClose: true
       } as Alert
     };
@@ -47,6 +47,10 @@ export class MoviesViewComponent implements OnInit {
         .subscribe(() => this.router.navigateByUrl('/movies'));
       }
     });
+  }
+
+  back(): void {
+    this.router.navigateByUrl('/movies');
   }
 
   private view(): void {
