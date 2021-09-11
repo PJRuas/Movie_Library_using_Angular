@@ -129,6 +129,16 @@
       "urlImdb": "https://www.imdb.com/title/tt3480822/?ref_=hm_tpks_tt_i_6_pd_tp1_cp",
       "genre": "Action",
       "id": 13
+    },
+    {
+      "title": "Luca",
+      "pictureUrl": "https://1.bp.blogspot.com/-kjw42jTTSA0/YInDGukyu4I/AAAAAAAAJOo/WLwrAmjUAZAam55zWxdig_e-WIsxwVfUwCLcBGAsYHQ/s1310/20210428_122046.jpg",
+      "releaseDate": "2021-07-18T03:00:00.000Z",
+      "description": "A young boy experiences an unforgettable seaside summer on the Italian Riviera filled with gelato, pasta and endless scooter rides. Luca shares these adventures with his newfound best friend, but all the fun is threatened by a deeply-held secret: he is a sea monster from another world just below the ocean's surface.",
+      "score": 7.5,
+      "urlImdb": "https://www.imdb.com/title/tt12801262/?ref_=tt_mv_close",
+      "genre": "Adventure",
+      "id": 14
     }
   ]
 }
